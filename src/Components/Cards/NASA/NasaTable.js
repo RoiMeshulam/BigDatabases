@@ -12,14 +12,44 @@ import {
     TablePagination,
     Paper
   } from '@mui/material';
+import SearchNasa from './SearchNasa';
 
 
 const NasaTable = ({events}) => {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [allEvents,setAllEvents] = useState([].concat(...Object.values(events[0])));
+    const [eventsToShow,setEventsToShow] = useState([].concat(...Object.values(events[0])));
+    const [id,setId]= useState("");
+    const [name,setName]= useState("");
+    const [checkBoxFlags, setCheckBoxFlag] = useState([false,false]);
     const [selectedOption, setSelectedOption] = useState(1);   
     const headers = ["Id","Name", "Distance From Earth(astronomical)","Distance From Earth(lunar)","Distance From Earth(kilometers)","Distance From Earth(miles)"];
+
+
+    const handleBooleanChange = (index) => {
+      const updatedList = [...checkBoxFlags];
+      updatedList[index] = !checkBoxFlags[index];
+      setCheckBoxFlag(updatedList);
+    };
+    
+    const handleSearch= () =>{
+      
+      const filteredList = allEvents.filter((item) => {
+        // If all checkBoxFlags are false, include all items
+        if (!checkBoxFlags.some((flag) => flag)) {
+          return true;
+        }
+        
+        // Check each flag and filter accordingly
+        return (
+          (!checkBoxFlags[0] || item.id.toLowerCase().includes(id.toLowerCase())) &&
+          (!checkBoxFlags[1] || item.name.toLowerCase().includes(name.toLowerCase())) 
+        );
+      });
+    
+      setEventsToShow(filteredList); 
+    }
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -45,8 +75,6 @@ const NasaTable = ({events}) => {
     
     };
 
-    //   const mergedList = [].concat(...Object.values(events[0]));
-    //   console.log(mergedList)
 
   return (
     <>
@@ -69,7 +97,8 @@ const NasaTable = ({events}) => {
             </Select>
         </Box> 
     </Box>
-    <TableContainer component={Paper}>
+    <SearchNasa checkBoxFlags={checkBoxFlags} onCheckBoxChange={handleBooleanChange} onClick={handleSearch} id={id} setId={setId} name={name} setName={setName}/>
+    <TableContainer component={Paper} sx={{marginTop:'3%',backgroundColor:'rgba(255,255,255,0.3)'}}>
     <Table>
       <TableHead>
         <TableRow>
@@ -79,7 +108,7 @@ const NasaTable = ({events}) => {
         </TableRow>
       </TableHead>
       <TableBody>
-      {allEvents
+      {eventsToShow
   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
   .map((event, index) => {
     const { miss_distance } = event.close_approach_data[0];

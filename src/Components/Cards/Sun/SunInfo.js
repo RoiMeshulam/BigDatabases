@@ -1,4 +1,4 @@
-export const sunInfo = [
+export const sunInfo = 
     {
         "main_paragraph": "The Sun is the star at the center of the solar system and is by far the largest object in it. It has a diameter of about 1.39 million kilometers and a mass of approximately 1.99 x 10^30 kilograms, accounting for about 99.86% of the total mass of the solar system. The Sun is a nearly perfect sphere of hot plasma, with internal convective motion that generates its magnetic field. The temperature at the Sun's core is about 15 million degrees Celsius, where nuclear fusion occurs, releasing energy in the form of electromagnetic waves and heat. This energy is radiated outwards, and it takes about 8 minutes and 20 seconds for it to reach Earth, which is about 149.6 million kilometers away. The Sun rotates on its axis, completing one rotation in about 25.4 Earth days near the equator and about 34 Earth days near the poles. The Sun is classified as a G-type main-sequence star, with a lifespan of about 10 billion years, and it has a complex system of magnetic activity that produces sunspots, flares, and coronal mass ejections that can affect Earth's space environment. The Sun has been studied extensively by a variety of telescopes and spacecraft, including the Solar and Heliospheric Observatory (SOHO) and the Parker Solar Probe.",
         "rise": {
@@ -134,4 +134,3 @@ export const sunInfo = [
           }
         ]
       }
-]

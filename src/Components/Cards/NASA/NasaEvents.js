@@ -32,7 +32,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 13:14",
+            close_approach_date_full: "2023-Jun-19 13:14",
             epoch_date_close_approach: 1686489240000,
             relative_velocity: {
               kilometers_per_second: "9.7246066122",
@@ -81,7 +81,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 04:30",
+            close_approach_date_full: "2023-Jun-19 04:30",
             epoch_date_close_approach: 1686457800000,
             relative_velocity: {
               kilometers_per_second: "10.3603094453",
@@ -130,7 +130,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 07:19",
+            close_approach_date_full: "2023-Jun-19 07:19",
             epoch_date_close_approach: 1686467940000,
             relative_velocity: {
               kilometers_per_second: "19.5665467455",
@@ -179,7 +179,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 13:29",
+            close_approach_date_full: "2023-Jun-19 13:29",
             epoch_date_close_approach: 1686490140000,
             relative_velocity: {
               kilometers_per_second: "15.0223203268",
@@ -228,7 +228,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 15:50",
+            close_approach_date_full: "2023-Jun-18 19:50",
             epoch_date_close_approach: 1686498600000,
             relative_velocity: {
               kilometers_per_second: "9.6003830767",
@@ -277,7 +277,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 19:01",
+            close_approach_date_full: "2023-Jun-18 19:01",
             epoch_date_close_approach: 1686510060000,
             relative_velocity: {
               kilometers_per_second: "7.6169716832",
@@ -326,7 +326,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 15:03",
+            close_approach_date_full: "2023-Jun-19 15:03",
             epoch_date_close_approach: 1686495780000,
             relative_velocity: {
               kilometers_per_second: "9.6269690644",
@@ -375,7 +375,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 19:17",
+            close_approach_date_full: "2023-Jun-19 10:17",
             epoch_date_close_approach: 1686511020000,
             relative_velocity: {
               kilometers_per_second: "11.8299735879",
@@ -424,7 +424,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 09:08",
+            close_approach_date_full: "2023-Jun-19 09:08",
             epoch_date_close_approach: 1686474480000,
             relative_velocity: {
               kilometers_per_second: "14.2775470272",
@@ -473,7 +473,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 08:59",
+            close_approach_date_full: "2023-Jun-19 08:59",
             epoch_date_close_approach: 1686473940000,
             relative_velocity: {
               kilometers_per_second: "23.4065386518",
@@ -522,7 +522,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-11",
-            close_approach_date_full: "2023-Jun-11 14:22",
+            close_approach_date_full: "2023-Jun-19 14:22",
             epoch_date_close_approach: 1686493320000,
             relative_velocity: {
               kilometers_per_second: "11.6908223738",
@@ -573,7 +573,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-10",
-            close_approach_date_full: "2023-Jun-10 11:59",
+            close_approach_date_full: "2023-Jun-19 11:59",
             epoch_date_close_approach: 1686398340000,
             relative_velocity: {
               kilometers_per_second: "14.4193508678",
@@ -622,7 +622,7 @@ export const NasaList = [
         close_approach_data: [
           {
             close_approach_date: "2023-06-10",
-            close_approach_date_full: "2023-Jun-10 02:43",
+            close_approach_date_full: "2023-Jun-19 02:43",
             epoch_date_close_approach: 1686364980000,
             relative_velocity: {
               kilometers_per_second: "22.2965250755",

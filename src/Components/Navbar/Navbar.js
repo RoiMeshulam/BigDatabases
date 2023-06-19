@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import {Typography,Box} from '@mui/material'
 import navbarBg from '../../img/navBg1.jpg'
 import Time from './Time'
 import IsraelClock from './IsraelClock'
 import CardsButtons from './CardsButtons'
+// import GoogleFontLoader from 'react-google-font-loader';
 
 
 const Navbar = () => {
+
+
   return (
     <Box
     sx={{
@@ -20,7 +23,7 @@ const Navbar = () => {
     >
         {/* header */}
         <Box sx={{height:'30%',display:'flex', justifyContent:'center'}}>
-            <Typography variant='h2' align="center" alignSelf={'center'} color={'white'}>Real Time Space Research</Typography>
+            <Typography variant='h2' align="center" alignSelf={'center'} color={'white'} sx={{ fontFamily: 'Caveat', color: 'white' }}>Real Time Space Research</Typography>
         </Box>
         {/* timers */}
         <Box sx={{height:'50%', display:'flex', marginTop:'2%'}}>

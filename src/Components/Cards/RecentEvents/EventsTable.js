@@ -4,13 +4,66 @@ import Select from '@mui/material/Select';
 import {Typography,Box} from '@mui/material'
 import TableComp from './TableComp';
 import { simulatorList } from './EventsExample';
+import SearchRecentEvents from './SearchRecentEvents';
 
 
 const EventsTable = () => {
 const [allEvents,setAllEvents] = useState(simulatorList);
+const [eventsToShow,setEventsToShow] = useState(simulatorList);
+const [eventDate,setEventDate]= useState("");
+const [eventsTime,setEventsTime]= useState("");
+const [reporter,setReporter]= useState("");
+const [eventType,setEventType]= useState("");
+const [severity,setSeverity]= useState("");
+const [checkBoxFlags, setCheckBoxFlag] = useState([false,false,false,false,false]);
+
 const [selectedOption, setSelectedOption] = useState(1);
 
+function extractDate(dateTimeString) {
+  const date = new Date(dateTimeString);
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${year}-${month}-${day}`;
+}
 
+function extractTime(dateTimeString) {
+  const date = new Date(dateTimeString);
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const seconds = date.getSeconds().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
+
+const handleBooleanChange = (index) => {
+  const updatedList = [...checkBoxFlags];
+  updatedList[index] = !checkBoxFlags[index];
+  setCheckBoxFlag(updatedList);
+};
+
+const handleSearch= () =>{
+  
+  const filteredList = allEvents.filter((item) => {
+    // If all checkBoxFlags are false, include all items
+    if (!checkBoxFlags.some((flag) => flag)) {
+      return true;
+    }
+    // Check each flag and filter accordingly
+    return (
+      (!checkBoxFlags[0] || extractDate(item.currentTime) === eventDate) &&
+      (!checkBoxFlags[1] || extractTime(item.currentTime) == eventsTime) &&
+      (!checkBoxFlags[2] || item.reporter.toLowerCase().includes(reporter.toLowerCase())) &&
+      (!checkBoxFlags[3] || item.eventType.toLowerCase().includes(eventType.toLowerCase())) &&
+      (!checkBoxFlags[4] || item.severity === Number(severity))
+    );
+  });
+
+  setEventsToShow(filteredList);
+
+
+
+ 
+}
 
 const handleChange = (event) => {
     const order = event.target.value
@@ -35,9 +88,9 @@ const handleChange = (event) => {
 
   return (
     <>
-    <Box display={'flex'}>
+    <Box display={'flex'} >
         <Box alignSelf={'center'} marginRight={'1%'}>
-            <Typography>Sort by: </Typography>
+            <Typography  color={'#4B0082'}>Sort by: </Typography>
         </Box>
         <Box>
             <Select
@@ -53,10 +106,11 @@ const handleChange = (event) => {
                 <MenuItem value={3}>Event Type</MenuItem>
                 <MenuItem value={4}>severity</MenuItem>
             </Select>
-        </Box> 
+        </Box>
     </Box>
+    <SearchRecentEvents checkBoxFlags={checkBoxFlags} onCheckBoxChange={handleBooleanChange} onClick={handleSearch} eventDate={eventDate} eventsTime={eventsTime} reporter={reporter} eventType={eventType} severity={severity} setEventDate={setEventDate} setEventsTime={setEventsTime} setReporter={setReporter} setEventType={setEventType} setSeverity={setSeverity}/> 
      <Box>
-        <TableComp events={allEvents}/>
+        <TableComp events={eventsToShow}/>
     </Box>
     </>
   )

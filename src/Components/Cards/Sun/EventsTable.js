@@ -11,30 +11,14 @@ import {
   } from '@mui/material';
 
 
-const TableComp = ({events}) => {
+const EventsTable = ({events}) => {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(10);
-    const headers = ["Event Date","Event Time", "Reporter", "Event Type", "Severity"];
+    const headers = ["Date", "Right Ascension", "Declination", "Magnitude", "Apparent Diameter", "Constellation"];
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
       };
-
-      function extractDate(dateTimeString) {
-        const date = new Date(dateTimeString);
-        const day = date.getDate().toString().padStart(2, '0');
-        const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        const year = date.getFullYear();
-        return `${day}/${month}/${year}`;
-      }
-
-      function extractTime(dateTimeString) {
-        const date = new Date(dateTimeString);
-        const hours = date.getHours().toString().padStart(2, '0');
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-        const seconds = date.getSeconds().toString().padStart(2, '0');
-        return `${hours}:${minutes}:${seconds}`;
-      }
 
 
   return (
@@ -52,11 +36,12 @@ const TableComp = ({events}) => {
           .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
           .map((event, index) => (
             <TableRow key={index}>
-              <TableCell>{extractDate(event.currentTime)}</TableCell>
-              <TableCell>{extractTime(event.currentTime)}</TableCell>
-              <TableCell>{event.reporter}</TableCell>
-              <TableCell>{event.eventType}</TableCell>
-              <TableCell>{event.severity}</TableCell>
+              <TableCell>{event.date}</TableCell>
+              <TableCell>{event.rightAscension}</TableCell>
+              <TableCell>{event.declination}</TableCell>
+              <TableCell>{event.magnitude}</TableCell>
+              <TableCell>{event.apparentDiameter}</TableCell>
+              <TableCell>{event.constellation}</TableCell>
             </TableRow>
           ))}
       </TableBody>
@@ -73,4 +58,4 @@ const TableComp = ({events}) => {
   )
 }
 
-export default TableComp
+export default EventsTable

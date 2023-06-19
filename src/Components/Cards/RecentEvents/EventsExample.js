@@ -1,6 +1,6 @@
 export const simulatorList = [
     {
-      currentTime: "2023-05-16T09:45:18.512Z",
+      currentTime: "2023-06-19T09:45:18.512Z",
       reporter: "MMT",
       locationRA: "22:54:36.94",
       locationDEC: "-041:32:09.32",
@@ -8,7 +8,7 @@ export const simulatorList = [
       severity: 2
     },
     {
-      currentTime: "2023-05-16T10:15:30.123Z",
+      currentTime: "2023-06-19T10:15:30.123Z",
       reporter: "ABC",
       locationRA: "117:20:42.71",
       locationDEC: "068:54:27.89",
@@ -16,7 +16,7 @@ export const simulatorList = [
       severity: 4
     },
     {
-      currentTime: "2023-05-16T12:30:45.789Z",
+      currentTime: "2023-06-19T12:30:45.789Z",
       reporter: "XYZ",
       locationRA: "305:10:18.85",
       locationDEC: "034:59:49.10",
@@ -24,7 +24,7 @@ export const simulatorList = [
       severity: 3
     },
     {
-      currentTime: "2023-05-16T13:15:55.321Z",
+      currentTime: "2023-06-19T13:15:55.321Z",
       reporter: "MMT",
       locationRA: "256:37:10.19",
       locationDEC: "-079:24:52.86",
@@ -32,7 +32,7 @@ export const simulatorList = [
       severity: 1
     },
     {
-      currentTime: "2023-05-16T14:20:02.789Z",
+      currentTime: "2023-06-18T14:20:02.789Z",
       reporter: "ABC",
       locationRA: "192:44:26.92",
       locationDEC: "027:50:38.74",
@@ -40,7 +40,7 @@ export const simulatorList = [
       severity: 5
     },
     {
-      currentTime: "2023-05-16T15:05:12.433Z",
+      currentTime: "2023-06-19T15:05:12.433Z",
       reporter: "XYZ",
       locationRA: "315:52:57.07",
       locationDEC: "-061:16:55.01",
@@ -48,7 +48,7 @@ export const simulatorList = [
       severity: 2
     },
     {
-      currentTime: "2023-05-16T16:30:26.918Z",
+      currentTime: "2023-06-19T16:30:26.918Z",
       reporter: "MMT",
       locationRA: "172:38:09.75",
       locationDEC: "007:23:01.57",
@@ -56,7 +56,7 @@ export const simulatorList = [
       severity: 4
     },
     {
-      currentTime: "2023-05-16T17:55:39.621Z",
+      currentTime: "2023-06-18T17:55:39.621Z",
       reporter: "ABC",
       locationRA: "292:12:33.85",
       locationDEC: "-062:51:55.72",
@@ -64,7 +64,7 @@ export const simulatorList = [
       severity: 3
     },
     {
-      currentTime: "2023-05-16T18:45:51.111Z",
+      currentTime: "2023-06-18T18:45:51.111Z",
       reporter: "XYZ",
       locationRA: "111:58:48.76",
       locationDEC: "059:15:17.62",
@@ -72,7 +72,7 @@ export const simulatorList = [
       severity: 1
     },
     {
-      currentTime: "2023-05-16T20:00:00.000Z",
+      currentTime: "2023-06-18T20:00:00.000Z",
       reporter: "MMT",
       locationRA: "245:29:21.93",
       locationDEC: "-055:36:40.51",
@@ -80,7 +80,7 @@ export const simulatorList = [
       severity: 5
     },
     {
-      currentTime: "2023-05-16T21:20:12.789Z",
+      currentTime: "2023-06-18T21:20:12.789Z",
       reporter: "ABC",
       locationRA: "178:05:17.60",
       locationDEC: "084:13:59.88",
@@ -88,7 +88,7 @@ export const simulatorList = [
       severity: 2
     },
     {
-      currentTime: "2023-05-16T22:40:25.455Z",
+      currentTime: "2023-06-18T22:40:25.455Z",
       reporter: "XYZ",
       locationRA: "233:50:10.23",
       locationDEC: "-032:28:08.09",

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const StyledButton = styled(Button)({
     // backgroundColor: 'red',
-    backgroundColor:'white',
+    backgroundColor:'rgba(255,255,255,0.7)',
     color: 'black',
     borderRadius: '4px',
     padding: '8px 16px',
